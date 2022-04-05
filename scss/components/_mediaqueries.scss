@@ -1,0 +1,306 @@
+/*media queries*/
+
+/*media queries tablet*/
+@media screen and (max-width:768px){
+    /*logo*/
+    header{
+        .logo{width: 90px;
+        height: 90px;
+        }
+        .nav-link{
+            margin: 0%;
+            padding: 0%;
+        }
+    }
+
+    /*index*/
+    /*sin imágenes ilustrativas*/
+    main{
+        .divMain{
+            display: grid;
+            grid-template-columns: auto;
+        }
+        .imgMaia{
+            margin-bottom: 5px;
+        }
+        .sectionMain{
+            display: none;
+        }
+        .divMain div{
+            display: flex;
+            justify-content: center;
+        }
+        h1{
+            margin-left: 0px;
+        }
+        .texto{
+            padding: 0%;
+            margin-right: 0%;
+        }
+    }
+
+    /*nosotros*/
+    /*sin torta tejido*/
+    main{
+        div{
+            .historia{
+                text-align: justify;
+            }
+        }      
+        .tortaTejido{
+            display: none;
+        }
+    }
+
+    /*pastelería*/
+    main{
+        .presentacion{
+            font-size: 20px;
+            text-align: justify;
+        }
+        div{
+            .titulosProductos{
+                font-size: 20px;
+                font-weight: 500;
+            }
+            .descripcionProductos{
+                font-size: 20px;
+            }
+            .nombresTartas{
+                margin-left: 42px;
+            }
+        }
+    }
+
+    /*desayunos*/
+    main{
+        .pDesayunos{
+            text-align: left;
+            font-size: 20px;
+            padding: 5px;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        section{
+            .iconos{
+                font-size: 20px;
+            }
+        }
+    }   
+    
+    /*galería*/
+    main{
+        .text-secondary{
+            font-size: 30px;
+        }
+        .fotosGaleria{
+            width: 130px;
+            height: 130px;
+        }
+    }
+
+    /*contacto*/
+    main{
+        .mainForm{
+            fieldset{
+                width: 150%;
+                padding: 5px;
+            }
+            .casilla{
+                width: 230px;
+            }
+        }
+        .fotosContacto{
+            display: none;
+        }
+    }    
+}
+
+/*media queries celular*/
+@media screen and (max-width:767px) and (min-width:320px){
+    /*logo*/
+    header{
+        .logo{
+            width: 90px;
+            height: 90px;
+        }
+        .nav-link{
+            margin: 0%;
+            padding: 0%;
+        }
+    }
+
+    /*index*/
+    /*sin imágenes ilustrativas*/
+    main{
+        .grilla{
+            display: flex;
+            flex-direction: column;
+        }
+        div{
+            .foto{
+                align-self: center;
+                .imgMaia{
+                    width: 170px;
+                    margin: 10px;
+                }
+            }
+        }
+        .texto{
+            font-size: 15px; 
+            margin: 15px;
+            text-align: justify;   
+        }
+        .sectionMain{
+            display: none;
+        }
+        div{
+            .arriba{
+                width: 55px;
+                border-radius: 5px;
+                color: black;
+            }
+        }
+    }
+
+    /*nosotros*/
+    /*sin torta tejido*/
+    main{
+        div{
+            .historia{
+                margin: 10px;
+                padding: 10px;
+                font-size: 15px;
+                text-align: justify;
+            }
+        } 
+        .tortaTejido{
+            display: none;
+        }
+        .video{
+            display: none;
+        }
+    }
+
+    /*pastelería*/
+    main{
+        h1{
+            text-align: center;
+        }
+        .presentacion{
+            font-size: 15px;
+            text-align: justify;
+        }
+        div{
+            .titulosProductos{
+                font-size: 15px;
+                padding: 5px;
+                margin: 5px;
+                font-weight: bold;
+            }
+            .descripcionProductos{
+                font-size: 15px;
+                text-align: center;
+                margin: 10px;
+            }
+        }
+        div{
+            .imagenesDeMuestra{
+                display: none;
+            }
+            .nombresTartas{
+                text-align: center;
+                font-size: 20px;
+            }
+        }    
+    }
+    
+    /*desayunos*/
+    main{
+        .pDesayunos{
+            font-size: 15px;
+            padding: 5px;
+            margin: 5px;
+            text-align: left;
+        }
+        .items{
+            display: none;
+        }
+        section{
+            .iconos{
+                display: none;
+            }
+        }
+    }
+
+    /*galería*/
+    main{
+        .titulo{
+            font-size: 30px;
+        }
+        .text-secondary{
+            font-size: 25px;
+            margin: 0px;
+        }
+        .fotosGaleria{
+            width: 96px;
+            height: 96px;
+        }
+    }
+
+    /*contacto*/
+    main{
+        .mainContacto{
+            margin: 5px;
+            .mainForm{
+                width: 100%;
+                fieldset{
+                    width: 100%;
+                    text-align: center;
+                    padding: 10px;
+                    legend{
+                        font-size: 22px;
+                    }
+                }
+                div{
+                    label{
+                        font-size: 19px;
+                        margin: 10px;
+                        padding: 10px;
+                    }
+                    .casilla{
+                        width: 80%;
+                        text-align: center;
+                    }
+                } 
+                .items{
+                    margin-bottom: 0px;
+                }           
+                .boton{
+                    width: 80px;
+                    margin: 10px;
+                }
+            }
+        }
+       .fotosContacto{
+           display: none;
+       } 
+    }
+
+    /*footer*/
+    footer{
+        margin: 1px;
+        padding: 1px;
+        div{
+            .logo{
+                width: 20px;
+                height: 20px;
+            }
+        }
+        h6{
+            font-size: 10px;
+            padding: 5px;
+            margin: 5px;
+        }
+    }
+}

@@ -1,0 +1,237 @@
+/*index*/
+main{
+    grid-area: main;
+    .titulo{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        font-size: 40px;   
+    }
+    .grilla{
+        display: grid;
+        grid-template-areas: "foto texto texto"
+                              "foto sectionMain sectionMain";
+    }
+    .foto{ 
+        grid-area: foto;
+        .imgMaia{   
+            margin: 50px;
+            @extend %bordes
+        }
+    }
+    .texto{ 
+        grid-area: texto;
+        font-size: map-get($map:$standard , $key:font-standard );
+        margin: 25px;
+        padding: 25px;
+        p{
+            margin: 25px;
+            span{
+                font-weight: bold;
+            }
+        }
+    }
+    .sectionMain{ 
+        grid-area: sectionMain;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        margin-bottom: 25px;
+        div{
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            margin: 5px;
+        }
+    }
+    div {
+        .arriba{
+            background-color: rgb(214, 199, 199);
+            font-size: small;
+            margin: 3px;
+            padding: 3px;
+            border-radius: 5px;
+            text-align: center;
+            width: 60px;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            text-decoration: none;
+            color: rgb(44, 41, 41);
+            &:hover{
+                transform: $transform_scale;
+                transition: $transition;
+            }
+        }
+    }
+}
+
+/*nosotros*/
+main{
+    .mainNosotros{
+        display: flex;
+    }
+    div{
+        .historia{
+            font-size: 20px;
+            margin: 30px;
+            padding: 30px;
+            text-align: left;
+            span{
+                font-weight: bold;
+            }
+        }
+        
+       .tortaTejido{
+           height: 350px;
+           margin: 50px;
+           @extend %bordes
+       }
+    } 
+    section{
+        .video{
+            text-align: center;
+        }
+    } 
+}
+
+/*pasteleria*/
+main{
+    .presentacion{
+        margin: 30px;
+        text-align: left;
+        font-size: 25px;
+    }
+    .flex{
+        display: flex;
+        width: 90%;
+        margin: 0 auto;
+    } 
+    div{
+        .titulosProductos{
+            @include titulos;
+        }           
+        .imagenesDeMuestra{
+            width: 20%;
+            height: 20%;
+            display: flex;
+            @extend %bordes
+        }
+        .descripcionProductos{
+            text-align: left;
+            font-size: 25px;
+            align-self: center;
+
+        }
+        .nombresTartas{
+            text-align: start;
+            margin: 15px;
+            font-weight:lighter;
+            font-size: 25px;
+            font-weight: 400;
+            margin-left: 80px;
+        }
+        .btn-agregar{
+            height: 30px;
+            margin: 20px;
+        }
+        .precio{
+            margin: 20px;
+        }
+    }
+}
+
+/*desayunos*/
+main{
+    .pDesayunos{
+        margin: 10px;
+        padding: 20px;
+        text-align: left;
+        font-size: 25px;
+    }
+    .iconos{
+        font-size: 30px;
+        list-style: none;
+        padding: 30px;
+        margin: 20px;
+        text-align: center;
+    }
+    .espacioIconos{
+        padding: 10px;
+        width: 60px;
+        height: 60px;
+    }     
+    .sectionDesayunos{
+        display: flex;
+        justify-content: center;
+    }   
+}
+
+/*galeria*/
+main{
+    h2{
+        text-align: center;
+        padding: 20px;
+        margin: 20px;
+        font-size: 32px;
+    }
+    .mainGaleria{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .fotosGaleria{
+        width: 250px;
+        height: 250px;
+        margin: 10px;
+        padding: 5px; 
+        @extend %bordes
+    }
+}
+
+/*contacto*/
+main{
+    .mainContacto{
+        display: flex;
+        flex-direction: row;
+        background-color: rgb(248, 176, 224);
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        margin: 40px;
+    }
+    form{
+        width: 50%;
+        fieldset{
+            padding: 30px;
+        }
+        .mainForm{
+            padding: 90px 30px;
+            font-size: 30px;
+        } 
+        legend{
+            font-weight: bolder;
+            font-size: 30px;
+        }
+        label{
+            font-size: 23px;
+            margin: 20px;
+        }
+        div{
+            .casilla{
+                width: 35%;
+                text-align: left;
+            }
+        }
+        .boton{
+            width: 15%;
+            margin: 10px;
+        }
+        #msg{
+            width: 400px;
+            height: 100px;
+        }
+    }
+}

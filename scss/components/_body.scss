@@ -1,0 +1,13 @@
+body{
+    background-color: #ffdaf4;
+    display: grid;
+    .contenedor{
+        height: 100vh;
+        display: grid;
+        grid-template-areas: "header  header"
+                             "nav  nav"
+                             "main  main"
+                             "footer  footer";
+    }
+}
+

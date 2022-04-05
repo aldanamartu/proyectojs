@@ -1,0 +1,25 @@
+footer{
+    grid-area: footer;
+    padding : 10px;
+    margin: 10px;
+    text-align: center;
+    font-size: 20px;
+    border-top: solid 3px black;
+    div{
+        .iconosRedes{
+            padding: 8px;
+        }
+        a{ 
+            .logo{
+                &:hover{
+                    transform: $transform_scale;
+                    transition: $transition;
+                }
+            }
+        }
+    }
+    h6{
+        padding: 5px;
+        margin: 5px;
+    }
+}

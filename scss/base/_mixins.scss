@@ -1,0 +1,9 @@
+/*mixins*/
+
+@mixin titulos {
+    background-color: rgb(248, 176, 224);
+    border-radius: 50px;
+    margin: 20px;
+    text-align: center;
+    font-size: 30px;
+}

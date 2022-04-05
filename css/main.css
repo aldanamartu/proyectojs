@@ -1,0 +1,422 @@
+@charset "UTF-8";
+/*mapas*/
+/*extends*/
+main .foto .imgMaia, main div .tortaTejido, main div .imagenesDeMuestra, main .fotosGaleria {
+  border: 2px solid #a3279d;
+  padding: 10px;
+  margin: 5px; }
+
+/*mixins*/
+body {
+  background-color: #ffdaf4;
+  display: grid; }
+  body .contenedor {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "header  header" "nav  nav" "main  main" "footer  footer"; }
+
+header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  justify-content: center; }
+  header a {
+    margin: 10px; }
+    header a .logo:hover {
+      transform: scale(1.1);
+      transition: 1s; }
+  header .nav-link {
+    font-size: 20px;
+    color: #232D36;
+    width: 100%; }
+
+/*index*/
+main {
+  grid-area: main; }
+  main .titulo {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-size: 40px; }
+  main .grilla {
+    display: grid;
+    grid-template-areas: "foto texto texto" "foto sectionMain sectionMain"; }
+  main .foto {
+    grid-area: foto; }
+    main .foto .imgMaia {
+      margin: 50px; }
+  main .texto {
+    grid-area: texto;
+    font-size: 25px;
+    margin: 25px;
+    padding: 25px; }
+    main .texto p {
+      margin: 25px; }
+      main .texto p span {
+        font-weight: bold; }
+  main .sectionMain {
+    grid-area: sectionMain;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 25px; }
+    main .sectionMain div {
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      margin: 5px; }
+  main div .arriba {
+    background-color: #d6c7c7;
+    font-size: small;
+    margin: 3px;
+    padding: 3px;
+    border-radius: 5px;
+    text-align: center;
+    width: 60px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    text-decoration: none;
+    color: #2c2929; }
+    main div .arriba:hover {
+      transform: scale(1.1);
+      transition: 1s; }
+
+/*nosotros*/
+main .mainNosotros {
+  display: flex; }
+
+main div .historia {
+  font-size: 20px;
+  margin: 30px;
+  padding: 30px;
+  text-align: left; }
+  main div .historia span {
+    font-weight: bold; }
+
+main div .tortaTejido {
+  height: 350px;
+  margin: 50px; }
+
+main section .video {
+  text-align: center; }
+
+/*pasteleria*/
+main .presentacion {
+  margin: 30px;
+  text-align: left;
+  font-size: 25px; }
+
+main .flex {
+  display: flex;
+  width: 90%;
+  margin: 0 auto; }
+
+main div .titulosProductos {
+  background-color: #f8b0e0;
+  border-radius: 50px;
+  margin: 20px;
+  text-align: center;
+  font-size: 30px; }
+
+main div .imagenesDeMuestra {
+  width: 20%;
+  height: 20%;
+  display: flex; }
+
+main div .descripcionProductos {
+  text-align: left;
+  font-size: 25px;
+  align-self: center; }
+
+main div .nombresTartas {
+  text-align: start;
+  margin: 15px;
+  font-weight: lighter;
+  font-size: 25px;
+  font-weight: 400;
+  margin-left: 80px; }
+
+main div .btn-agregar {
+  height: 30px;
+  margin: 20px; }
+
+main div .precio {
+  margin: 20px; }
+
+/*desayunos*/
+main .pDesayunos {
+  margin: 10px;
+  padding: 20px;
+  text-align: left;
+  font-size: 25px; }
+
+main .iconos {
+  font-size: 30px;
+  list-style: none;
+  padding: 30px;
+  margin: 20px;
+  text-align: center; }
+
+main .espacioIconos {
+  padding: 10px;
+  width: 60px;
+  height: 60px; }
+
+main .sectionDesayunos {
+  display: flex;
+  justify-content: center; }
+
+/*galeria*/
+main h2 {
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  font-size: 32px; }
+
+main .mainGaleria {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+
+main .fotosGaleria {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  padding: 5px; }
+
+/*contacto*/
+main .mainContacto {
+  display: flex;
+  flex-direction: row;
+  background-color: #f8b0e0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  margin: 40px; }
+
+main form {
+  width: 50%; }
+  main form fieldset {
+    padding: 30px; }
+  main form .mainForm {
+    padding: 90px 30px;
+    font-size: 30px; }
+  main form legend {
+    font-weight: bolder;
+    font-size: 30px; }
+  main form label {
+    font-size: 23px;
+    margin: 20px; }
+  main form div .casilla {
+    width: 35%;
+    text-align: left; }
+  main form .boton {
+    width: 15%;
+    margin: 10px; }
+  main form #msg {
+    width: 400px;
+    height: 100px; }
+
+footer {
+  grid-area: footer;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  font-size: 20px;
+  border-top: solid 3px black; }
+  footer div .iconosRedes {
+    padding: 8px; }
+  footer div a .logo:hover {
+    transform: scale(1.1);
+    transition: 1s; }
+  footer h6 {
+    padding: 5px;
+    margin: 5px; }
+
+/*media queries*/
+/*media queries tablet*/
+@media screen and (max-width: 768px) {
+  /*logo*/
+  header .logo {
+    width: 90px;
+    height: 90px; }
+  header .nav-link {
+    margin: 0%;
+    padding: 0%; }
+  /*index*/
+  /*sin imágenes ilustrativas*/
+  main .divMain {
+    display: grid;
+    grid-template-columns: auto; }
+  main .imgMaia {
+    margin-bottom: 5px; }
+  main .sectionMain {
+    display: none; }
+  main .divMain div {
+    display: flex;
+    justify-content: center; }
+  main h1 {
+    margin-left: 0px; }
+  main .texto {
+    padding: 0%;
+    margin-right: 0%; }
+  /*nosotros*/
+  /*sin torta tejido*/
+  main div .historia {
+    text-align: justify; }
+  main .tortaTejido {
+    display: none; }
+  /*pastelería*/
+  main .presentacion {
+    font-size: 20px;
+    text-align: justify; }
+  main div .titulosProductos {
+    font-size: 20px;
+    font-weight: 500; }
+  main div .descripcionProductos {
+    font-size: 20px; }
+  main div .nombresTartas {
+    margin-left: 42px; }
+  /*desayunos*/
+  main .pDesayunos {
+    text-align: left;
+    font-size: 20px;
+    padding: 5px;
+    margin-left: 5%;
+    margin-right: 5%; }
+  main section .iconos {
+    font-size: 20px; }
+  /*galería*/
+  main .text-secondary {
+    font-size: 30px; }
+  main .fotosGaleria {
+    width: 130px;
+    height: 130px; }
+  /*contacto*/
+  main .mainForm fieldset {
+    width: 150%;
+    padding: 5px; }
+  main .mainForm .casilla {
+    width: 230px; }
+  main .fotosContacto {
+    display: none; } }
+
+/*media queries celular*/
+@media screen and (max-width: 767px) and (min-width: 320px) {
+  /*logo*/
+  header .logo {
+    width: 90px;
+    height: 90px; }
+  header .nav-link {
+    margin: 0%;
+    padding: 0%; }
+  /*index*/
+  /*sin imágenes ilustrativas*/
+  main .grilla {
+    display: flex;
+    flex-direction: column; }
+  main div .foto {
+    align-self: center; }
+    main div .foto .imgMaia {
+      width: 170px;
+      margin: 10px; }
+  main .texto {
+    font-size: 15px;
+    margin: 15px;
+    text-align: justify; }
+  main .sectionMain {
+    display: none; }
+  main div .arriba {
+    width: 55px;
+    border-radius: 5px;
+    color: black; }
+  /*nosotros*/
+  /*sin torta tejido*/
+  main div .historia {
+    margin: 10px;
+    padding: 10px;
+    font-size: 15px;
+    text-align: justify; }
+  main .tortaTejido {
+    display: none; }
+  main .video {
+    display: none; }
+  /*pastelería*/
+  main h1 {
+    text-align: center; }
+  main .presentacion {
+    font-size: 15px;
+    text-align: justify; }
+  main div .titulosProductos {
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px;
+    font-weight: bold; }
+  main div .descripcionProductos {
+    font-size: 15px;
+    text-align: center;
+    margin: 10px; }
+  main div .imagenesDeMuestra {
+    display: none; }
+  main div .nombresTartas {
+    text-align: center;
+    font-size: 20px; }
+  /*desayunos*/
+  main .pDesayunos {
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px;
+    text-align: left; }
+  main .items {
+    display: none; }
+  main section .iconos {
+    display: none; }
+  /*galería*/
+  main .titulo {
+    font-size: 30px; }
+  main .text-secondary {
+    font-size: 25px;
+    margin: 0px; }
+  main .fotosGaleria {
+    width: 96px;
+    height: 96px; }
+  /*contacto*/
+  main .mainContacto {
+    margin: 5px; }
+    main .mainContacto .mainForm {
+      width: 100%; }
+      main .mainContacto .mainForm fieldset {
+        width: 100%;
+        text-align: center;
+        padding: 10px; }
+        main .mainContacto .mainForm fieldset legend {
+          font-size: 22px; }
+      main .mainContacto .mainForm div label {
+        font-size: 19px;
+        margin: 10px;
+        padding: 10px; }
+      main .mainContacto .mainForm div .casilla {
+        width: 80%;
+        text-align: center; }
+      main .mainContacto .mainForm .items {
+        margin-bottom: 0px; }
+      main .mainContacto .mainForm .boton {
+        width: 80px;
+        margin: 10px; }
+  main .fotosContacto {
+    display: none; }
+  /*footer*/
+  footer {
+    margin: 1px;
+    padding: 1px; }
+    footer div .logo {
+      width: 20px;
+      height: 20px; }
+    footer h6 {
+      font-size: 10px;
+      padding: 5px;
+      margin: 5px; } }
