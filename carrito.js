@@ -6,21 +6,20 @@ class Producto{
         this.cantidad = 1;
         this.precioTotal = precio;
     }
-
-    agregarUnidad(){
-        this.cantidad++;
-    }
-
-    quitarUnidad(){
-        this.cantidad--;
-    }
-
-    actualizarPrecioTotal(){
-        this.precioTotal = this.precio * this.cantidad;
-    }
 }
 
-let carrito = [];
+const agregarUnidad = (producto) => {
+    producto.cantidad++;
+}
+
+const quitarUnidad = (producto) => {
+    producto.cantidad--;
+}
+
+const actualizarPrecioTotal = (producto) => {
+    producto.precioTotal = producto.precio * producto.cantidad;
+}
+
 let precioTotal;
 
 const agregarProducto = (event) => {
@@ -28,29 +27,18 @@ const agregarProducto = (event) => {
     let producto = event.target;
     //console.log("precio: " + producto.getAttribute('precio'));
 
-    let productoEnCarrito = carrito.find((elemento) => elemento.id == producto.id);
-    
+    let productoEnCarrito = JSON.parse(localStorage.getItem(producto.id));
+
     if (productoEnCarrito) {
-        let index = carrito.findIndex((elemento) => {
-            if (elemento.id === producto.id) {
-                return true;
-            }
-        });
-
-        carrito[index].agregarUnidad();
-        carrito[index].actualizarPrecioTotal();
-        console.log(`Se ha añadido otra unidad del producto ${carrito[index].gusto} Unidades: ${carrito[index].cantidad}`);
+        agregarUnidad(productoEnCarrito);
+        actualizarPrecioTotal(productoEnCarrito);
     } else {
-        carrito.push(new Producto(producto.id, producto.getAttribute('gusto'), parseInt(producto.getAttribute('precio'))));
-        console.log(`Se ha añadido al carrito el producto ${producto.getAttribute('gusto')}`);
+        productoEnCarrito = new Producto(producto.id, producto.getAttribute('gusto'), parseInt(producto.getAttribute('precio')));
     }
+    
+    localStorage.setItem(productoEnCarrito.id, JSON.stringify(productoEnCarrito));
+    console.log(`Se ha añadido una unidad del producto ${productoEnCarrito.gusto} Unidades: ${productoEnCarrito.cantidad}`);
 
-    document.getElementById('total').innerHTML = obtenerPrecioTotal();
-    let productosEnCarrito = "";
-    carrito.forEach(producto => productosEnCarrito += producto.gusto + " cantidad: " + producto.cantidad + "<br>");
-    document.getElementById('carrito').innerHTML = productosEnCarrito
-
-    console.table(carrito);
 }
 
 function obtenerPrecioTotal() {
@@ -63,6 +51,19 @@ function obtenerPrecioTotal() {
 }
 
 
+const verCarrito = () => {
+    let carrito = document.getElementById('carrito');
+    if (carrito) {
+        let productos = '';
+        for (var i = 0; i < localStorage.length; i++){
+            let producto = JSON.parse(localStorage.getItem(localStorage.key(i)));
+            productos += (`<div>gusto: ${producto.gusto} cantidad: ${producto.cantidad} precio total: ${producto.precioTotal}</div>`);
+        }
+        carrito.innerHTML = productos;
+    }
+}
+
+
 const botones = document.getElementsByClassName("btn-agregar");
 
 for (let boton of botones) {
@@ -70,3 +71,4 @@ for (let boton of botones) {
     boton.addEventListener("click", agregarProducto);
 }
 
+verCarrito();
