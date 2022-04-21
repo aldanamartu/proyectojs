@@ -39,6 +39,12 @@ const agregarProducto = (event) => {
     localStorage.setItem(productoEnCarrito.id, JSON.stringify(productoEnCarrito));
     console.log(`Se ha añadido una unidad del producto ${productoEnCarrito.gusto} Unidades: ${productoEnCarrito.cantidad}`);
 
+    Swal.fire({
+        title: 'Genial',
+        html: `Agregaste <strong>${productoEnCarrito.gusto}</strong> al carrito!`,
+        icon: 'success'
+      })
+
 }
 
 function obtenerPrecioTotal() {
@@ -72,3 +78,4 @@ for (let boton of botones) {
 }
 
 verCarrito();
+
